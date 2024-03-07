@@ -19,13 +19,8 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: Set up AWS credentials
-      uses: aws-actions/configure-aws-credentials@v2
+        node-version: ${{ matrix.node-version }
+    - name: Generate Security Report
+      uses: rsdmike/github-security-report-action@v2
       with:
-        role-to-assume: arn:aws:iam::507471600573:role/TesterLee0728
-        aws-region: us-east-1
-    - run: npm i
-      working-directory: './my-app'
-    - run: npm run start
-      working-directory: './my-app'
+        token: ${{ secrets.SECURITY_TOKEN }}
