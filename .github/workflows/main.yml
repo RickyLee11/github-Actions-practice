@@ -20,7 +20,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Generate Security Report
-      uses: rsdmike/github-security-report-action@v3
+    - name: CodeQL and Dependabot Report Action
+      uses: rsdmike/github-security-report-action@v3.0.4
       with:
         token: ${{ secrets.SECURITY_TOKEN }}
+            
