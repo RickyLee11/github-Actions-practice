@@ -20,6 +20,4 @@ jobs:
       uses: rsdmike/github-security-report-action@v3.0.4
       with:
         token: ${{ secrets.SECURITY_TOKEN }}
-        sarifReportDir: ./result/example.sarif
-        node-version: 20
-            
+        sarifReportDir: ./result/example.sarif            
