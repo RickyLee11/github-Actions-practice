@@ -25,6 +25,8 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Security-Report
-        path: /*.pdf
+        path: ./*.pdf
     - name: Find present working directory
       run: pwd
+    - name: list file
+      run: ls
