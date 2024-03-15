@@ -21,4 +21,5 @@ jobs:
       with:
         token: ${{ secrets.SECURITY_TOKEN }}
         sarifReportDir: ./result
+        node-version: 20
             
